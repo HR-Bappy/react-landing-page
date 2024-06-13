@@ -1,0 +1,41 @@
+.top-header {
+  a {
+    text-decoration: none;
+    margin: 0 5px;
+    padding: 5px 10px;
+
+    img {
+      width: 45px;
+      margin-right: 5px;
+    }
+  }
+}
+
+.navbar {
+  .navbar-nav {
+    a {
+      cursor: pointer;
+      color: #333;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #125c87;
+      }
+    }
+
+    a.active {
+      color: #125c87;
+      font-weight: 600;
+      position: relative;
+    }
+    a.active::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: #125c87;
+      transition: left 0.3s ease, width 0.3s ease;
+    }
+  }
+}
