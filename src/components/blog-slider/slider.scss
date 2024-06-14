@@ -2,8 +2,8 @@
     overflow: hidden;
     padding: 0 .5rem;
 
-    
-    
+
+
     .shape-box {
         display: inline-block;
         position: relative;
@@ -88,7 +88,7 @@
     }
 
     .read-more-btn {
-        border: 2px solid #db3236;
+        border: 2px solid #125c87;
         font-size: 14px;
         cursor: pointer;
         padding: 10px 20px;
@@ -100,7 +100,7 @@
         -webkit-transition: all 0.3s;
         -moz-transition: all 0.3s;
         transition: all 0.3s;
-        background: #db3236;
+        background: #125c87;
         color: #fff;
         border-radius: 2px;
         margin-top: 25px;
@@ -109,7 +109,7 @@
 
     .read-more-btn:hover {
         background: transparent;
-        color: #db3236;
+        color: #125c87;
 
     }
 
@@ -129,6 +129,7 @@
         transform: skewY(20deg);
         background: #ffffffd5;
     }
+
     // .shape-box_half:before {}
 
     .shape-box_half:hover figcaption {
@@ -141,5 +142,23 @@
 
     .shape-box_half:hover>.after {
         opacity: 1;
+    }
+
+}
+
+.blog-slider {
+
+    .slider-sm {
+        display: none;
+
+        @media screen and (max-width: 767px) {
+            display: block;
+        }
+    }
+
+    .slider-lg {
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
     }
 }

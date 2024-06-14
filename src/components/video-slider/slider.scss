@@ -1,0 +1,39 @@
+.video-slider {
+    overflow: hidden;
+    padding: .5rem;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+
+    .video-card-section {
+
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        padding: 0 5px;
+        padding-top: 56.25%;
+
+        iframe {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            bottom: 5px;
+            right: 5px;
+            width: calc(100% - 10px);
+            height: calc(100% - 10px);
+            border: none;
+        }
+    }
+
+    .slider-sm {
+        display: none;
+        @media screen and (max-width: 767px) {
+            display: block;
+        }
+    }
+    .slider-lg {
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
+    }
+}

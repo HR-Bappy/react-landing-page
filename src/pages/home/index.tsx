@@ -10,6 +10,7 @@ import { FaCheckCircle } from "react-icons/fa";
 import { FaPeopleGroup } from "react-icons/fa6";
 import BlogSlide from '../../components/blog-slider';
 import ImageSlide from '../../components/image-slider';
+import VideoSlide from '../../components/video-slider';
 
 const services = [
     {
@@ -90,7 +91,7 @@ const galleryImages = [
     }, {
         id: 1,
         title: 'Image content 02',
-        img: ['/img/mission/mission6.jpg', '/img/mission/mission2.jpg', '/img/mission/mission3.jpg','/img/mission/mission1.jpg','/img/mission/mission5.jpg'],
+        img: ['/img/mission/mission6.jpg', '/img/mission/mission2.jpg', '/img/mission/mission3.jpg', '/img/mission/mission1.jpg', '/img/mission/mission5.jpg'],
         isMulti: true
     }, {
         id: 1,
@@ -179,6 +180,38 @@ const blogs = [
         img: '/img/mission/mission1.jpg',
     }
 ]
+const videos = [
+    {
+        id: 1,
+        title: 'C++ Programming Language Tutorial | Introduction to Arrays in C++ | GeeksforGeeks',
+        url: 'https://www.youtube.com/embed/eOdNhPwOInc?si=9L-0rSllXFl70JOY'
+    },
+    {
+        id: 2,
+        title: 'Python Programming Tutorial | Arrays - Part 1 | GeeksforGeeks',
+        url: 'https://www.youtube.com/embed/W7X_d0yDdGk?si=y2WgJPj5EjfWAEzs'
+    },
+    {
+        id: 2,
+        title: 'Python Programming Tutorial | Arrays - Part 2 | GeeksforGeeks',
+        url: 'https://www.youtube.com/embed/21dgNSzG2Iw?si=VSIVWbzkFG-xfJ3J'
+    },
+    {
+        id: 2,
+        title: 'Array Rotation | GeeksforGeeks',
+        url: 'https://www.youtube.com/embed/viaha1SnpT4?si=t_1ZUQ2avo8YVlxg'
+    },
+    {
+        id: 2,
+        title: 'Reversal algorithm for array rotation | GeeksforGeeks',
+        url: 'https://www.youtube.com/embed/QOpU9-l5T7Y?si=LN2An_RDGIg2yKsC'
+    },
+    {
+        id: 2,
+        title: 'Program to cyclically rotate an array by one | GeeksforGeeks',
+        url: 'https://www.youtube.com/embed/ZNqWgwwpgLU?si=qoJxA5ZMSNn9uXtd'
+    },
+]
 const Dashboard = () => {
     return (
         <div className="home">
@@ -192,10 +225,8 @@ const Dashboard = () => {
                     <MissionCard data={missions} />
                     <BlogSlide data={blogs} />
                     <ImageSlide data={galleryImages} />
+                    <VideoSlide data={videos} />
                 </div>
-
-
-
             </div>
         </div>
     )
