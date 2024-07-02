@@ -224,7 +224,7 @@ const Dashboard = () => {
                     <ServicesCard data={services} />
                     <MissionCard data={missions} />
                     <BlogSlide data={blogs} />
-                    <ImageSlide data={galleryImages} />
+                    {/* <ImageSlide data={galleryImages} /> */}
                     <VideoSlide data={videos} />
                 </div>
             </div>

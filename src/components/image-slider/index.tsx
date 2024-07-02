@@ -1,3 +1,4 @@
+import GalleryModal from '../gallery-modal';
 import './slider.scss'
 import Slider from "react-slick";
 
@@ -21,15 +22,11 @@ export default function ImageSlide({ data }: any) {
     autoplaySpeed: 3000,
   };
 
-  const handleClick = (index: number) => {
-
-  }
-  // https://www.w3schools.com/cssref/css3_pr_backdrop-filter.php
   return (
     <>
       <div className='image-slider mt-5'>
         <h1 className="section-title">Gallery Image</h1>
-        <div className="slider-lg">
+        {/* <div className="slider-lg">
           <Slider {...settings}>
             {
               data?.map((item: any, index: number) => {
@@ -66,48 +63,11 @@ export default function ImageSlide({ data }: any) {
               })
             }
           </Slider>
-        </div>
+        </div> */}
 
-
-        <div className="slider-sm">
-          <Slider {...settingsSm}>
-            {
-              data?.map((item: any, index: number) => {
-                return (
-                  <div key={index} className="slider-card-section">
-                    {
-                      item?.isMulti ?
-                        <div className='multi-img-sec'>
-                          {
-                            item?.img?.map((image: any, indx: number) => {
-                              if (indx < 4)
-                                return (
-                                  <div className="img-sec" key={indx} onClick={() => handleClick(index)}>
-                                    <div className="image-overlay">
-                                      <span>Preview</span>
-                                    </div>
-                                    <img src={image} alt="" />
-                                  </div>
-                                )
-                            })
-                          }
-                        </div>
-                        :
-                        <div className="single-img-sec" onClick={() => handleClick(index)}>
-                          <div className="image-overlay">
-                            <span>Preview</span>
-                          </div>
-                          <img src={item.img} alt="" />
-                        </div>
-                    }
-
-                  </div>
-                )
-              })
-            }
-          </Slider>
-        </div>
       </div>
+      
+      <GalleryModal data={data} />
     </>
   );
 }
